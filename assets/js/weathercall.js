@@ -34,10 +34,11 @@ function fnStoredCities(){
     {
         arrHistorytData = JSON.parse(localStorage.getItem('WeatherForecastCities'));
         for (i = 0; i < arrHistorytData.length; i++) {// creare Li buttons
-            var bthCities = document.createElement('li')
-            bthCities.textContent = arrHistorytData[i];            
-            bthCities.setAttribute("Data-cityname", arrHistorytData[i]);
-            ulListedCities.appendChild(bthCities);
+            var btnCities = document.createElement('li')
+            btnCities.textContent = arrHistorytData[i];            
+            btnCities.setAttribute("Data-cityname", arrHistorytData[i]);
+            btnCities.setAttribute('class','text-capitalize');
+            ulListedCities.appendChild(btnCities);
         }
     }
 }

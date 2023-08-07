@@ -9,7 +9,7 @@
   }
   
   body {
-    font-family: Arial;
+    font-family:  'Titillium Web', Arial, Helvetica, sans-serif; /* The First font family is from Google fonts*/
     margin: 0;
  
   }
