@@ -1,3 +1,9 @@
+/* 
+- Creation Date: 08/05/2023
+-Created by Sajith Aravindan
+========================================================================================
+
+/* Global Styling  */
 * {
     box-sizing: border-box;
   }
@@ -8,6 +14,7 @@
  
   }
   
+  /* Header Section Styling */
   header {
     padding: 40px;
     text-align: center;
@@ -15,10 +22,26 @@
     color: #fff;
   }
 
-  .btn-xl {
-    padding: 5px 5px;
-    margin: 10px 2px 10px 2px;
-    font-size: 20px;
-    border-radius: 10px;
-    width:100%;   
+/* Buttons Styling */
+#lstHistorybtn {
+    align-items: flex-start;
+    flex-wrap: wrap;    
+}
+
+/* Styling for the Section LI that displays Stored cities */
+#lstHistorybtn li {    
+    margin-bottom: 2vh;    
+    min-width: 14vw;
+    padding: 3px;
+    background: #AEAEAE;
+    color: #fff;
+    border: 0;
+    border-radius: 7px;  
+    font-size: 130%;
+    cursor: pointer;   
+}
+
+/* hover Styling for LI that displays Stored cities */
+#lstHistorybtn li:hover {
+    background:#198754; 
 }

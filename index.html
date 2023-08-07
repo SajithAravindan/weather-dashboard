@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <header class="p-3 mb-2 bg-gradient-primary text-white">
+    <header class="p-3 mb-2 bg-gradient-primary text-white" style="background-color: #3C449C;">
         <h3 class="display-3">Weather DashBoard</h3>
     </header>
     <div>
@@ -28,27 +28,19 @@
                     <input type="text" class="form-control" id="txtboxCityName" placeholder="Enter City name" />
                     <button class="btn btn-success btn-xl btn-block" id="btnSearch">Search</button>
                 </form>
+                <div class="container-fluid px-1" id="containerHistory">
+                    <ul id="lstHistorybtn" class="btn">
+                        <!-- space to dynamically generate answers as <li> elements -->
+                    </ul>
+                </div>
             </div>
             <div class="col-12 col-md-10 col-lg-10">
-                <div class="row w-100" id="divWeatherContainerMain" style="max-width: 50rem;">
-                    
-                </div>
-                <div class="row w-100" id="divWeatherContainer">
-                    
-                </div>
+                <div class="row w-100" id="divWeatherContainerMain" style="width: 80%;"></div>
+                <h4 style="display: none;" id="lblForecast"><br />5-Day Forecast:</h4>
+                <div class="row w-100" id="divWeatherContainer"></div>
             </div>
-
         </div>
     </div>
-
-    <footer class="bg-light text-center text-lg-start">
-        <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-            © 2020 Copyright:
-            <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-        </div>
-        <!-- Copyright -->
-    </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
         integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>

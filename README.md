@@ -23,6 +23,7 @@ AS A traveler
 
 # Demo
 
+<img src="./assets/imgs/demo.png" alt="Project Demo">
 
 # Review
 Deployed Application URL: https://sajitharavindan.github.io/weather-dashboard/
