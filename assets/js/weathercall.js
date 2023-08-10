@@ -30,6 +30,7 @@ function fnDisplayHCitiesFC(event) {
 //Function to Display Stored cities
 function fnStoredCities(){
     var arrHistorytData = []; //initialize array
+    ulListedCities.innerHTML='';
     if (localStorage.getItem('WeatherForecastCities') != null)//Local storage is not empty
     {
         arrHistorytData = JSON.parse(localStorage.getItem('WeatherForecastCities'));
@@ -66,7 +67,8 @@ var SearchSubmitHandler = function (event) {
     var strUserSearch = strCityName.value.trim();//get User input
     if (strUserSearch) {
         fnStoreCities(strUserSearch);//store the city
-        getUserRepos(strUserSearch);//get weather data        
+        getUserRepos(strUserSearch);//get weather data
+        fnStoredCities();//Display Stored cities        
         strCityName.textContent = '';
     } else {
         alert('Please enter a City Name');
@@ -126,7 +128,7 @@ function getWeatherData(objWeatherJson) {
                 //weather data - Temp , Wind & Humidity
                 var divCardBlockContentTemp = document.createElement('p');
                 divCardBlockContentTemp.setAttribute('class', 'card-text');
-                divCardBlockContentTemp.textContent = 'Temp: ' + objWeatherJson.list[i].main.temp;
+                divCardBlockContentTemp.textContent = 'Temp: ' + objWeatherJson.list[i].main.temp +' F';
                 var divCardBlockContentWind = document.createElement('p');
                 divCardBlockContentWind.setAttribute('class', 'card-text');
                 divCardBlockContentWind.textContent = 'Wind: ' + objWeatherJson.list[i].wind.speed + ' MPH';
@@ -168,7 +170,7 @@ function getWeatherData(objWeatherJson) {
             //weather data - Temp , Wind & Humidity
             var divCardBlockContentTemp = document.createElement('p');
             divCardBlockContentTemp.setAttribute('class', 'card-text');
-            divCardBlockContentTemp.textContent = 'Temp: ' + objWeatherJson.list[i].main.temp;
+            divCardBlockContentTemp.textContent = 'Temp: ' + objWeatherJson.list[i].main.temp +' F';
             var divCardBlockContentWind = document.createElement('p');
             divCardBlockContentWind.setAttribute('class', 'card-text');
             divCardBlockContentWind.textContent = 'Wind: ' + objWeatherJson.list[i].wind.speed + ' MPH';
